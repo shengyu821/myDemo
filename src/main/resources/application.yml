@@ -8,3 +8,9 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+  设置关联表名
+  global-config:
+    db-config:
+      table-prefix: t_   添加表名前缀
+      table-underline:false  不使用下划线命名
