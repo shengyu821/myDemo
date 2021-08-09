@@ -1,5 +1,8 @@
 package com.lsy;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lsy.entity.User;
 import com.lsy.mapper.UserMapper;
@@ -7,9 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 @SpringBootTest
 public class CRUDTests {
@@ -57,6 +58,68 @@ public class CRUDTests {
         User user = userMapper.selectById(1L);
         System.out.println(user);
     }
+
+
+    //SelectOne
+    @Test
+    public void testSelectOne() {
+        // 查询条件：名字为Tom的用户
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("name", "Tom");
+        // 开始查询
+        User user = userMapper.selectOne(queryWrapper);
+        System.out.println(user);
+    }
+
+    @Test
+    public void testSelectOne2() {
+        // 查询条件：名字为Tom的用户
+        LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(User::getName, "Tom");
+        // 开始查询
+        User user = userMapper.selectOne(queryWrapper);
+        System.out.println(user);
+    }
+
+    @Test
+    public void testSelectOne3() {
+        User user = new LambdaQueryChainWrapper<>(userMapper)
+                .eq(User::getName, "Tom")
+                .one();
+        System.out.println(user);
+    }
+
+    @Test
+    public void testSelectOne4() {
+        User user = new User();
+        user.setName("Tom");
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>(user);
+        // 开始查询
+        User user2 = userMapper.selectOne(queryWrapper);
+        System.out.println(user2);
+    }
+
+
+    // SelectBatchIds
+    @Test
+    public void testSelectBatchIds() {
+        List<Integer> ids = new ArrayList<>();
+        ids.add(1);
+        ids.add(2);
+        ids.add(3);
+        List<User> users = userMapper.selectBatchIds(ids);
+        System.out.println(users);
+    }
+
+    @Test
+    public void testSelectByMap() {
+        Map<String, Object> columnMap = new HashMap<>();
+        columnMap.put("name", "Tom");
+        columnMap.put("age", 28);
+        List<User> users = userMapper.selectByMap(columnMap);
+        System.out.println(users);
+    }
+
 
     // 测试批量查询！
     @Test
