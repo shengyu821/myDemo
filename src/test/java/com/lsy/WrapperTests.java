@@ -217,21 +217,4 @@ public class WrapperTests {
                 .list();
     }
 
-
-    //  自定义 SQL 语句使用 Wrapper
-    @Test
-    public void testNotLike() {
-        List<UserInfo> userInfos = new LambdaQueryChainWrapper<>(userInfoMapper)
-                .notLike(UserInfo::getName, "xxname") // name not like '%xxname%'
-                .list();
-    }
-
-    @Test
-    public void testNotLike() {
-        List<UserInfo> userInfos = new LambdaQueryChainWrapper<>(userInfoMapper)
-                .notLike(UserInfo::getName, "xxname") // name not like '%xxname%'
-                .list();
-    }
-
-
 }
