@@ -13,7 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.*;
 
 @SpringBootTest
-public class CRUDTests {
+public class ServiceCRUDTests {
 
     @Autowired
     private UserInfoMapper userInfoMapper;
