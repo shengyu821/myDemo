@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 @TableName(value = "user")
-public class User {
+public class UserInfo {
     @TableId(type = IdType.AUTO)
     private Long id;
     private String name;
