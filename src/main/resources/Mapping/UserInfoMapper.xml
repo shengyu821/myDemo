@@ -9,4 +9,9 @@
         FROM user
         WHERE age > #{age}
     </select>
+
+
+    <select id="getAll" resultType="com.lsy.entity.UserInfo">
+        SELECT * FROM user ${ew.customSqlSegment}
+    </select>
 </mapper>
