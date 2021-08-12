@@ -32,4 +32,8 @@ public interface UserInfoMapper extends BaseMapper<UserInfo> {
 
     // 自定义分页
     IPage<UserInfo> selectPage2(Page<?> page, Integer age);
+
+    @Select("SELECT user.*, area.area_name FROM user, area " +
+            "WHERE user.area_id = area.id and user.id = #{id}")
+    UserInfo getUserById(int id);
 }

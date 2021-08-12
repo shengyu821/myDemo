@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lsy.mapper.AreaMapper">
+
+    <resultMap type="com.lsy.entity.Area" id="BaseResultMap">
+        <result property="id" column="id"/>
+        <collection property="users" column="id"
+                    select="com.example.demo.mapper.UserMapper.selectByAreaId"/>
+    </resultMap>
+
+    <select id="getAreaByIdXML" resultMap="BaseResultMap">
+        SELECT *
+        FROM area
+        WHERE id = #{id}
+    </select>
+
+
+    <resultMap type="com.lsy.entity.Area" id="BaseResultMap2">
+        <id property="id" column="id"/>
+        <id property="areaName" column="area_name"/>
+        <collection property="users" ofType="com.lsy.entity.User">
+            <id property="id" column="id"/>
+            <result property="name" column="name"/>
+            <result property="age" column="age"/>
+            <result property="areaId" column="area_id"/>
+        </collection>
+    </resultMap>
+
+    <select id="getAreaByIdXML2" resultMap="BaseResultMap2">
+        SELECT area.*, user.id, user.name, user.age, user.area_id
+        FROM area,
+             user
+        WHERE area.id = user.area_id
+          AND area.id = #{id}
+    </select>
+</mapper>

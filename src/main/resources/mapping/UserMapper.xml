@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lsy.mapper.UserMapper">
+
+    <select id="getUserById" resultType="com.lsy.entity.User">
+        SELECT user.*, area.area_name
+        FROM user,
+             area
+        WHERE user.area_id = area.id
+          AND user.id = #{id}
+    </select>
+
+    <resultMap type="com.lsy.entity.User" id="BaseResultMap">
+        <result property="areaId" column="area_id"/>
+        <association property="area" column="area_id"
+                     select="com.example.demo.mapper.AreaMapper.selectById"/>
+    </resultMap>
+    <select id="getUserByIdOne" resultMap="BaseResultMap">
+        SELECT *
+        FROM user
+        WHERE id = #{id}
+    </select>
+
+    <resultMap type="com.lsy.entity.User" id="BaseResultMapTwo">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="age" column="age"/>
+        <result property="areaId" column="area_id"/>
+        <association property="area">
+            <id property="id" column="area_id"/>
+            <result property="areaName" column="area_name"/>
+        </association>
+    </resultMap>
+    <select id="getUserByIdOne2" resultMap="BaseResultMap">
+        SELECT user.*, area.area_name, area.id AS area_id
+        FROM user,
+             area
+        WHERE user.area_id = area.id
+          AND user.id = #{id}
+    </select>
+
+</mapper>
