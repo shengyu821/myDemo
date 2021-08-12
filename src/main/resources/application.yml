@@ -8,6 +8,7 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapping/*.xml
 
 #  设置关联表名
 #  global-config:

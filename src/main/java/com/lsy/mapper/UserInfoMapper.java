@@ -1,7 +1,9 @@
 package com.lsy.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Constants;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lsy.entity.UserInfo;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -27,4 +29,7 @@ public interface UserInfoMapper extends BaseMapper<UserInfo> {
 //    List<UserInfo> getAll(@Param(Constants.WRAPPER) Wrapper wrapper);
 
 //    List<UserInfo> getAll(@Param(Constants.WRAPPER) Wrapper wrapper);
+
+    // 自定义分页
+    IPage<UserInfo> selectPage2(Page<?> page, Integer age);
 }
