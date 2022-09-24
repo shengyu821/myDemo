@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lsy.mapper.UserMapper">
 
-    <select id="getUserById" resultType="com.lsy.entity.User">
+    <select id="getUserById" resultType="com.mybatisplus.entity.User">
         SELECT user.*, area.area_name
         FROM user,
              area
@@ -11,7 +11,7 @@
           AND user.id = #{id}
     </select>
 
-    <resultMap type="com.lsy.entity.User" id="BaseResultMap">
+    <resultMap type="com.mybatisplus.entity.User" id="BaseResultMap">
         <result property="areaId" column="area_id"/>
         <association property="area" column="area_id"
                      select="com.example.demo.mapper.AreaMapper.selectById"/>
@@ -22,7 +22,7 @@
         WHERE id = #{id}
     </select>
 
-    <resultMap type="com.lsy.entity.User" id="BaseResultMapTwo">
+    <resultMap type="com.mybatisplus.entity.User" id="BaseResultMapTwo">
         <result property="id" column="id"/>
         <result property="name" column="name"/>
         <result property="age" column="age"/>

@@ -1,16 +1,11 @@
-package com.lsy.mapper;
+package com.mybatisplus.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.core.toolkit.Constants;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.lsy.entity.UserInfo;
+import com.mybatisplus.entity.UserInfo;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
-
-import java.sql.Wrapper;
-import java.util.List;
 
 @Mapper
 public interface UserInfoMapper extends BaseMapper<UserInfo> {

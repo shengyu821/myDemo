@@ -1,11 +1,10 @@
-package com.lsy;
+package com.mybatisplus;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.lsy.entity.UserInfo;
-import com.lsy.mapper.UserInfoMapper;
+import com.mybatisplus.entity.UserInfo;
+import com.mybatisplus.mapper.UserInfoMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

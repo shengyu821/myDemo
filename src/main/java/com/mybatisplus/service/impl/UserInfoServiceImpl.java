@@ -1,9 +1,9 @@
-package com.lsy.service.impl;
+package com.mybatisplus.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.lsy.entity.UserInfo;
-import com.lsy.mapper.UserInfoMapper;
-import com.lsy.service.UserInfoService;
+import com.mybatisplus.entity.UserInfo;
+import com.mybatisplus.mapper.UserInfoMapper;
+import com.mybatisplus.service.UserInfoService;
 import org.springframework.stereotype.Service;
 
 @Service

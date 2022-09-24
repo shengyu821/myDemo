@@ -1,10 +1,10 @@
-package com.lsy;
+package com.mybatisplus;
 
-import com.lsy.entity.Area;
-import com.lsy.entity.User;
-import com.lsy.mapper.AreaMapper;
-import com.lsy.mapper.UserInfoMapper;
-import com.lsy.mapper.UserMapper;
+import com.mybatisplus.entity.Area;
+import com.mybatisplus.entity.User;
+import com.mybatisplus.mapper.AreaMapper;
+import com.mybatisplus.mapper.UserInfoMapper;
+import com.mybatisplus.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

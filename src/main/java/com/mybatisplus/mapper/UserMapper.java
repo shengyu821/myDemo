@@ -1,7 +1,7 @@
-package com.lsy.mapper;
+package com.mybatisplus.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.lsy.entity.User;
+import com.mybatisplus.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.One;
 import org.apache.ibatis.annotations.Result;

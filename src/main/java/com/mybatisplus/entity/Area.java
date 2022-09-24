@@ -1,4 +1,4 @@
-package com.lsy.entity;
+package com.mybatisplus.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

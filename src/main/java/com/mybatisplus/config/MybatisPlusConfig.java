@@ -1,4 +1,4 @@
-package com.lsy.config;
+package com.mybatisplus.config;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
