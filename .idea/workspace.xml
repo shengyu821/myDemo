@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2efb4a74-9b11-4027-92da-054fe9a78d0b" name="Default Changelist" comment="" />
+    <list default="true" id="2efb4a74-9b11-4027-92da-054fe9a78d0b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +35,6 @@
     <OptionsSetting value="false" id="Update" />
   </component>
   <component name="ProjectViewState">
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
     <option name="sortByType" value="true" />
   </component>
@@ -45,7 +46,8 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -60,107 +62,20 @@
       <recent name="com.lsy.entity" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MapperCRUDTests.testInsert">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MapperCRUDTests.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LanceTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mybatisplus.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mybatisplus" />
-      <option name="MAIN_CLASS_NAME" value="com.mybatisplus.MapperCRUDTests" />
-      <option name="METHOD_NAME" value="testInsert" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MulTableTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LanceTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mybatisplus.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mybatisplus" />
-      <option name="MAIN_CLASS_NAME" value="com.mybatisplus.MulTableTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PageTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LanceTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mybatisplus.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mybatisplus" />
-      <option name="MAIN_CLASS_NAME" value="com.mybatisplus.PageTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PageTest.testPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LanceTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mybatisplus.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mybatisplus" />
-      <option name="MAIN_CLASS_NAME" value="com.mybatisplus.PageTest" />
-      <option name="METHOD_NAME" value="testPage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PageTest.testPageMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LanceTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mybatisplus.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mybatisplus" />
-      <option name="MAIN_CLASS_NAME" value="com.mybatisplus.PageTest" />
-      <option name="METHOD_NAME" value="testPageMap" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.MapperCRUDTests.testInsert" />
-        <item itemvalue="JUnit.MulTableTest.test" />
-        <item itemvalue="JUnit.PageTest.testPage" />
-        <item itemvalue="JUnit.PageTest.testPageMap" />
-        <item itemvalue="JUnit.PageTest.test" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -184,7 +99,7 @@
       <workItem from="1632730740833" duration="7000" />
       <workItem from="1660612502019" duration="151000" />
       <workItem from="1662011127543" duration="3000" />
-      <workItem from="1663989078467" duration="1631000" />
+      <workItem from="1663989078467" duration="1985000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1628476906646</created>
